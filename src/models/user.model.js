@@ -19,7 +19,7 @@
     },
     role:{
          type: String,
-         enum:["jobSeeker"]
+         enum:["jobSeeker", "employer"]
          
 
     }
