@@ -6,7 +6,7 @@
  const applyJob = asyncHandler(async(req , res)=>{
    const {id}=req.params 
    const applicant = req.user._id 
-   const {coverLetter} = req.body 
+   const {coverLetter} = req.body || {}
    const jobApply = await applicantModel.findOne({job:id ,applicant: applicant})
    if (jobApply) {
     throw new ApiError(404 ,"applicant alredy applied")
